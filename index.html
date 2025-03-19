@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h1 class="large-title">酒类品牌 - 美酒佳酿</h1>
-  <link rel="stylesheet" href="styles.css">
-  <!-- 引入字体图标 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒韵之美 - 品味佳酿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #f5e9d6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c8654a, #e09b73);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            background-image: url('https://pic.vj.com/57/57814/57814_s.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .wine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .wine-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .wine-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .wine-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .wine-content {
+            padding: 1.5rem;
+        }
+
+        .wine-content h2 {
+            color: #c8654a;
+            margin-bottom: 1rem;
+        }
+
+        .wine-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">美酒佳酿</a>
-      <ul class="nav-links">
-        <li><a href="#home">首页</a></li>
-        <li><a href="#about">关于我们</a></li>
-        <li><a href="#products">产品展示</a></li>
-        <li><a href="#contact">联系我们</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header class="header">
+        <h1>酒韵之美</h1>
+        <p>探寻千年酒文化，品味岁月酿成的醇香</p>
+    </header>
 
-  <!-- 首页横幅 -->
-  <header class="hero" id="home">
-    <div class="container">
-      <h1>品味经典，享受生活</h1>
-      <p>探索我们的精选酒品，感受每一滴的醇香与历史。</p>
-      <a href="#products" class="btn">查看产品</a>
-    </div>
-  </header>
+    <main class="wine-grid">
+        <div class="wine-card">
+            <img src="https://pic.vj.com/57/57814/57814_s.jpg" alt="古风酒器" class="wine-image">
+            <div class="wine-content">
+                <h2>古风酒器之美</h2>
+                <p>精致的酒器承载着千年饮酒文化，每一道纹路都诉说着岁月的故事。</p>
+            </div>
+        </div>
 
-  <!-- 关于我们 -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2>关于我们</h2>
-      <p>我们是一家专注于高品质酒类的品牌，致力于为顾客提供最纯正的酒品体验。无论是红酒、白酒还是威士忌，我们都精心挑选，确保每一瓶都值得您的品味。</p>
-    </div>
-  </section>
+        <div class="wine-card">
+            <img src="https://pic.vj.com/57/57815/57815_s.jpg" alt="酒坛佳酿" class="wine-image">
+            <div class="wine-content">
+                <h2>坛中岁月醇香</h2>
+                <p>密封的酒坛里，时光将谷物酿成琼浆，开启瞬间满溢芬芳。</p>
+            </div>
+        </div>
 
-  <!-- 产品展示 -->
-  <section class="products" id="products">
-    <div class="container">
-      <h2>产品展示</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="https://via.placeholder.com/300x400" alt="红酒">
-          <h3>经典红酒</h3>
-          <p>来自法国波尔多地区的顶级红酒，口感醇厚，香气浓郁。</p>
-          <a href="#" class="btn">了解更多</a>
+        <div class="wine-card">
+            <img src="https://pic.vj.com/57/57816/57816_s.jpg" alt="美酒倾斟" class="wine-image">
+            <div class="wine-content">
+                <h2>斟酒瞬间的优雅</h2>
+                <p>酒液倾落的弧线，是力与美的结合，诠释饮酒仪式的浪漫。</p>
+            </div>
         </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/300x400" alt="白酒">
-          <h3>传统白酒</h3>
-          <p>中国茅台镇传统工艺酿造，香气独特，回味悠长。</p>
-          <a href="#" class="btn">了解更多</a>
-        </div>
-        <div class="product-card">
-          <img src="https://via.placeholder.com/300x400" alt="威士忌">
-          <h3>单一麦芽威士忌</h3>
-          <p>苏格兰高地精选单一麦芽威士忌，口感顺滑，风味独特。</p>
-          <a href="#" class="btn">了解更多</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- 联系我们 -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>联系我们</h2>
-      <p>如果您有任何问题或需要订购，请随时联系我们。</p>
-      <div class="contact-info">
-        <div class="info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <p>地址：阜阳职业技术学院</p>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-phone"></i>
-          <p>电话：+86 000000</p>
-        </div>
-        <div class="info-item">
-          <i class="fas fa-envelope"></i>
-          <p>邮箱：000000</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container">
-      <div class="social-links">
-        <a href="#"><i class="fab fa-weixin"></i></a>
-        <a href="#"><i class="fab fa-weibo"></i></a>
-        <a href="#"><i class="fab fa-qq"></i></a>
-      </div>
-    </div>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2025 酒文化展示平台 | 保留所有权利</p>
+    </footer>
 </body>
 </html>
